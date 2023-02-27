@@ -1,12 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MatrixM
 {
-    internal class Exception
+    public class InvalidMatrixSizeException : Exception
     {
+        public InvalidMatrixSizeException(int size) : base($"Не правильный размер матрицы: {size}")
+        {
+        }
+    }
+
+    public class MatrixNotInvertibleException : Exception
+    {
+        public MatrixNotInvertibleException() : base("Матрица не может Инверс.")
+        {
+        }
     }
 }
